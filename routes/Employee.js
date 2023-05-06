@@ -51,7 +51,7 @@ router.patch('/TaskStatus/:id', auth , async(req, res) => {
   }
 })
 
-router.post('/signup',async (req, res) => {
+router.post('/signup', [auth,admin] ,async (req, res) => {
     const { name ,
           password ,
           role ,
